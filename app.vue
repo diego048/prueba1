@@ -1,10 +1,7 @@
 <template>
   <div>
-    hola
-    <form name="ask-question" netlify netlify-honeypot="bot-field" hidden>
+    <form name="ask-question" netlify netlify-honeypot="bot-field">
       <input type="text" name="name" />
-      <input type="radio" name="panelist" />
-      <textarea name="question"></textarea>
     </form>
   </div>
 </template>
