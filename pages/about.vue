@@ -1,39 +1,14 @@
 <template>
   <form
-    name="ask-question"
-    method="post"
+    name="contact2"
+    method="POST"
     data-netlify="true"
     data-netlify-honeypot="bot-field"
     netlify
     action="/"
     >
-    <input type="hidden" name="form-name" value="ask-question" />
-    <label v-for="(panelist, index) in panelists" :key="index">
-      <input
-        type="radio"
-        name="panelist"
-        :value="panelist"
-        @input="ev => updatePanelist"
-        :checked="panelist === currentPanelist"
-      />
-      <span>{{ panelist }}</span>
-    </label>
-    <button>Submit</button>
+    <input type="hidden" name="bot-field" />
+    <input type="text" name="nombre" />
+    <button name="submit" type="submit">Submit</button>
   </form>
 </template>
-<script>
-export default {
-  name: "QAForm",
-  methods: {
-    updatePanelist (ev) {
-      this.currentPanelist = ev.target.value
-    }
-  },
-  data () {
-    return {
-      panelists: ['Evan You', 'Chris Fritz'],
-      currentPanelist: 'Evan You'
-    }
-  }
-}
-</script>
