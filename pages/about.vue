@@ -4,6 +4,8 @@
     method="post"
     data-netlify="true"
     data-netlify-honeypot="bot-field"
+    netlify
+    action="/"
     >
     <input type="hidden" name="form-name" value="ask-question" />
     <label v-for="(panelist, index) in panelists" :key="index">
@@ -16,7 +18,6 @@
       />
       <span>{{ panelist }}</span>
     </label>
-    ...
     <button>Submit</button>
   </form>
 </template>
